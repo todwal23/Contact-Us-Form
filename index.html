@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <title>Contact form</title>
+    </head>
+    <body>
+        <header>
+            <h1>Contact Us</h1>
+        </header>
+        <main>
+            <form action="/" method="GET">
+                <section>
+                    <h2>How can we help you?</h2>
+                    <label for="username">Your Name</label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="user-name"
+                        placeholder="name"
+                        required
+                    >
+                    <label for="email">Your email address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="user-email"
+                        placeholder="email"
+                        required
+                    >
+                    <label for="phone">Your phone number</label>
+                    <input
+                        type="number"
+                        id="phone"
+                        name="phone-number"
+                        placeholder="phone number"
+                        required
+                    >
+                    <label for="textarea">Your message</label>
+                    <textarea
+                        name="text-area"
+                        id="textarea"
+                        cols="30"
+                        rows="5"
+                    ></textarea>
+                    <label for="selection">How did you find us?</label>
+                    <select name="reason" id="selection">
+                        <option value="selected">Web search</option>
+                        <option value="selected">Friend</option>
+                        <option value="selected">Advertising</option>
+                    </select>
+                </section>
+                <section>
+                    <h2>How should we reply?</h2>
+                    <div class="contact-reply">
+                        <input
+                            type="radio"
+                            id="contact"
+                            name="contact-me"
+                            value="phone"
+                        >
+                        <label for="contact">Call me</label>
+                    </div>
+                    <div class="contact-reply">
+                        <input
+                            type="radio"
+                            id="email"
+                            name="contact-me"
+                            value="email"
+                        >
+                        <label for="email">Send me an email</label>
+                    </div>
+                    <div class="contact-reply">
+                        <input
+                            type="radio"
+                            id="reply"
+                            name="contact-me"
+                            value="no-reply"
+                        >
+                        <label for="reply">Don't reply</label>
+                    </div>
+                </section>
+                <section>
+                    <div class="contact-reply">
+                        <input type="checkbox" id="checking" name="checkboxer">
+                        <label for="checking">Agree to terms</label>
+                    </div>
+                </section>
+                <br>
+                <section>
+                    <div class="buttons">
+                        <button class="reset" type="reset">Clear</button>
+                        <button onclick="sayHello()" class="submit" type="submit">Submit</button>
+                    </div>
+                </section>
+                <br><br>
+            </form>
+        </main>
+        <script>
+            function sayHello() {
+              alert('submited');
+            }
+            </script>
+            
+    </body>
+</html>
